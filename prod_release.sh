@@ -6,9 +6,9 @@ $editor VERSION                                  &&
 version=`cat VERSION`                            &&
 git commit -am "v$version release"               &&
 git tag v`cat VERSION`                           &&
-git push github                                  &&
+git push github master                           &&
 git push --tags github                           &&
-git push production                              &&
+git push production master                       &&
 printf "Now, update VERSION to ($version+1).rc1" &&
 read x                                           &&
 $editor VERSION                                  &&
